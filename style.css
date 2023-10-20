@@ -1,3 +1,8 @@
+.bg-image-background {
+    background-image: url(./imgs/FUNDO-MAIN.jpg);
+    background: cover no-repeat;
+
+}
 .campo-pesquisa {
     width: 300px;
     padding: 12px;
@@ -28,4 +33,51 @@
   text-shadow:   1px 1px #000000;
   transition: all 0.2s ease;
   cursor: pointer;
+  }
+  .chars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-custom {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.58);
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px rgba(91, 228, 12, 0.886);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    cursor: pointer;
+    transition: all 0.5s;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+      
+  }
+
+
+  .statusColor {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    box-shadow: #000000 1px 1px 5px;
+    margin: none;
+  }
+  .dead {
+    background-color: red;
+  }
+  .alive {
+    background-color: rgb(7, 247, 7);
+  }
+  .unknown {
+    background-color: lightgray;
   }
