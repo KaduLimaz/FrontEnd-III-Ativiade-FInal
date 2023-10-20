@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Rick and Morty</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <a href="#" class="navbar-brand">
+                <img
+                  src="./imgs/RICK_MORTY_ICON.png"
+                  alt="Logo Rick and Morty"
+                  width="50"
+                />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <img
+                  src="./imgs/logo-rick.png"
+                  alt="Logo"
+                  class="rounded mx-auto d-block"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="container">
+            <div class="row">
+              <section class="col-12">
+                <input
+                  type="text"
+                  id="searchCharacter"
+                  class="campo-pesquisa mx-auto d-block mt-2"
+                  placeholder="Pesquisar personagem"
+                />
+              </section>
+              <section class="col-12 mt-3">
+                <div class="d-flex justify-content-center gap-1">
+                  <button
+                    onclick="PaginationPrev()"
+                    id="btnPrevios"
+                    class="btn-rickPrev"
+                  >
+                    Voltar
+                  </button>
+                  <span id="currentPage" class="contador-Pag">1</span>
+                  <span class="contador-Pag">de</span>
+                  <span id="totalPages" class="contador-Pag">1</span>
+                  <button
+                    onclick="PaginationNext()"
+                    id="btnNext"
+                    class="btn-rickNext"
+                  >
+                    Próximo
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
