@@ -1,8 +1,20 @@
 .bg-image-background {
     background-image: url(./imgs/FUNDO-MAIN.jpg);
     background: cover no-repeat;
+    
 
 }
+
+.bg-footer {
+  background: url(./imgs/FUNDO-FOOTER.jpg) center top/cover no-repeat;
+  height: 1000px;
+ 
+}
+
+.bg-footer-single-color{
+  background-color: rgb(31,41,33);
+}
+
 .campo-pesquisa {
     width: 300px;
     padding: 12px;
@@ -81,3 +93,153 @@
   .unknown {
     background-color: lightgray;
   }
+
+
+  /* animação */
+
+  .box-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 3px solid transparent;
+  }
+  
+  .top-1,
+  .bottom-2,
+  .left-3,
+  .right-4 {
+    
+    -webkit-animation: 8s linear infinite;
+            animation: 8s linear infinite;
+  }
+  .top-1 {    
+    -webkit-animation-name: top;
+            animation-name: top;
+  }
+  @-webkit-keyframes top-1 {
+    25% {
+      width: 0;
+      background: #ffdb00;
+    }
+    38% {
+      width: calc(103%);
+      background: #ffdb00;
+    }
+    50% {
+      background: #ffdb00;
+    }
+    62% {
+      background: #ffdb00;
+    }
+    75% {
+      width: calc(103%);
+      background: #ffdb00;
+    }
+    88% {
+      left: auto;
+      right: -3px;
+      width: 0;
+      background: #ffdb00;
+    }
+  }
+  
+  .bottom-2 {
+    
+    -webkit-animation-name: bottom;
+            animation-name: bottom;
+  }
+  @-webkit-keyframes bottom-2 {
+    0% {
+      width: 0;
+    }
+    12% {
+      width: calc(103%);
+      background: #ffdb00;
+    }
+    25% {
+      background: #ffdb00;
+    }
+    38% {
+      background: #ffdb00;
+    }
+    50% {
+      width: calc(103%);
+      background: #ffdb00;
+    }
+    62% {
+      left: -3px;
+      width: 0;
+      background: #ffdb00;
+    }
+    75% {
+      background: #ffdb00;
+    }
+  }
+  
+  .left-3 {
+    
+    -webkit-animation-name: left;
+            animation-name: left;
+  }
+  @-webkit-keyframes left-3 {
+    12% {
+      height: 0;
+      background: #ffdb00;
+    }
+    25% {
+      height: calc(103%);
+      background: #ffdb00;
+    }
+    38% {
+      background: #ffdb00;
+    }
+    50% {
+      background: #ffdb00;
+    }
+    62% {
+      height: calc(103%);
+      background: #ffdb00;
+    }
+    75% {
+      top: -3px;
+      height: 0;
+      background: #ffdb00;
+    }
+    88% {
+      background: #ffdb00;
+    }
+  }
+  
+  .right-4 {
+    
+    -webkit-animation-name: right;
+            animation-name: right;
+  }
+  @-webkit-keyframes right-4 {
+    38% {
+      height: 0;
+      background: #ffdb00;
+    }
+    50% {
+      height: calc(103%);
+      background: #ffdb00;
+    }
+    62% {
+      background: #ffdb00;
+    }
+    75% {
+      background: #ffdb00;
+    }
+    88% {
+      height: calc(103%);
+      background: #ffdb00;
+    }
+    100% {
+      top: auto;
+      bottom: -3px;
+      height: 0;
+      background: #ffdb00;
+    }
+  }
+  

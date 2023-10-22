@@ -83,49 +83,39 @@
         </div>
       </div>
     </header>
-    <main class="container-fluid bg-image-background">
+    <main class="container-fluid bg-image-background mt-3">
       <div class="chars-container row"></div>
     </main>
 
     <!-- modal -->
-    <div
-      class="modal fade"
-      id="characterModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="characterModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="characterModalLabel">
-              Características do Personagem
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Fechar"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body" id="characterModalBody">
-            <!-- Conteúdo das características do personagem será inserido aqui -->
+          <div class="modal-body">
+            ...
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Fechar
-            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="container-fluid bg-footer"></div>
+    <footer class="container-fluid bg-footer-single-color">
+      <div class="row justify-content-center">
+        <div class="col-2 m-5"> <p class="text-light">PERSONAGENS: XX</p></div>
+        <div class="col-2 m-5"> <p class="text-light">LOCALIZAÇÔES: XX</p>  </div>
+        <div class="col-2 m-5"> <p class="text-light">EPISÒDIOS: XX</p> </div>
+        <div class="col-12 text-center"> <p class="text-light">Desenvolvido por: <span class="fs-5 fw-bold">Carlos Eduardo Sabino de Lima</span> em 2023</p></div>
+      </div>
+    </footer>
+   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

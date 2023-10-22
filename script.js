@@ -9,9 +9,9 @@ async function getCharacters(page, name = "") {
     const params = { page, name };
     const response = await api.get(`/character`, { params });
 
-    const characters = response.data.results;
-    console.log(characters);
+    const characters = response.data.results;    
     const info = response.data.info;
+    const totalPagesApi = response.data.info.pages;
 
     charactersRickMorty(characters);
     updatePaginationText(info.pages);
@@ -26,7 +26,7 @@ function charactersRickMorty(characters) {
 
   characters.forEach((character) => {
     const cardCharacters = document.createElement("div");
-    cardCharacters.classList.add("character", "col-md-4", "mb-4", "card-custom");
+    cardCharacters.classList.add("col-md-4", "mb-4", "card-custom", );
 
     cardCharacters.innerHTML = `
     <div class="card">
@@ -67,6 +67,7 @@ detailButtons.forEach((button) => {
   });
 });
 
+
 // modal
 function showCharacterDetails(characterId) {
     const character = getCharacters.find((char) => char.id == characterId);
@@ -90,7 +91,7 @@ function showCharacterDetails(characterId) {
 function PaginationNext() {
   if (currentPage < 42) {
     currentPage++; // Incrementar para a próxima página
-    getCharacters(currentPage);
+    getCharacters(currentPage, searchCharacters.value);
     updatePaginationText(info.pages);
   }
 }
@@ -99,7 +100,7 @@ function PaginationNext() {
 function PaginationPrev() {
   if (currentPage > 1) {
     currentPage--;
-    getCharacters(currentPage);
+    getCharacters(currentPage, searchCharacters.value);
   }
 }
 
@@ -110,6 +111,8 @@ function updatePaginationText(totalPages) {
 
   currentPageElement.textContent = currentPage;
   totalPagesElement.textContent = 42;
+
+
 }
 
 // Pesquisar personagem
