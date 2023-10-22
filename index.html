@@ -88,15 +88,21 @@
     </main>
 
     <!-- modal -->
+
+    
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="character-name"></h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <img src="" id="image-modal"/>
+            <p id="status-modal" class=""></p>
+            <p id="type-modal"></p>
+            <p id="location-modal"></p>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -105,13 +111,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="container-fluid bg-footer"></div>
     <footer class="container-fluid bg-footer-single-color">
       <div class="row justify-content-center">
-        <div class="col-2 m-5"> <p class="text-light">PERSONAGENS: XX</p></div>
-        <div class="col-2 m-5"> <p class="text-light">LOCALIZAÇÔES: XX</p>  </div>
-        <div class="col-2 m-5"> <p class="text-light">EPISÒDIOS: XX</p> </div>
+        <div class="col-2 m-5"> <p class="text-light">CHARACTERS: 826</p></div>
+        <div class="col-2 m-5"> <p class="text-light">LOCATIONS: 126</p>  </div>
+        <div class="col-2 m-5"> <p class="text-light">EPISODES: 51</p> </div>
         <div class="col-12 text-center"> <p class="text-light">Desenvolvido por: <span class="fs-5 fw-bold">Carlos Eduardo Sabino de Lima</span> em 2023</p></div>
       </div>
     </footer>
@@ -124,5 +130,6 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./api.js"></script>
     <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </body>
 </html>
