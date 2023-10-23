@@ -42,7 +42,7 @@ function charactersRickMorty(characters) {
     const mainContainer = document.createElement('div')
     mainContainer.classList.add('card')
 
-    // image
+    // Card
     
     const image = document.createElement("img")
     image.classList.add("card-img-top")

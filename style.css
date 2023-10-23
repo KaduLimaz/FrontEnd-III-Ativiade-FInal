@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
 .bg-image-background {
     background-image: url(./imgs/FUNDO-MAIN.jpg);
     background: cover no-repeat;
@@ -95,151 +97,195 @@
   }
 
 
-  /* animação */
+  /* animação */ 
+  
+  
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
 
-  .box-animation {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    border: 3px solid transparent;
-  }
+:root {
+  --color-primary: #ff8533;
+  --color-secondary: #2b385a;
+  --color-tertiary: #2b385a;
+  --color-quaternary: #2b385a;
+  --color-quinary: #ee6352; 
+}
+
+
+
+
+.text_shadows {
+  text-shadow: 1px 1px 0 var(--color-secondary), 2px 2px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 6px 6px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 100px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
   
-  .top-1,
-  .bottom-2,
-  .left-3,
-  .right-4 {
-    
-    -webkit-animation: 8s linear infinite;
-            animation: 8s linear infinite;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.1rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
   }
-  .top-1 {    
-    -webkit-animation-name: top;
-            animation-name: top;
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
   }
-  @-webkit-keyframes top-1 {
-    25% {
-      width: 0;
-      background: #ffdb00;
-    }
-    38% {
-      width: calc(103%);
-      background: #ffdb00;
-    }
-    50% {
-      background: #ffdb00;
-    }
-    62% {
-      background: #ffdb00;
-    }
-    75% {
-      width: calc(103%);
-      background: #ffdb00;
-    }
-    88% {
-      left: auto;
-      right: -3px;
-      width: 0;
-      background: #ffdb00;
-    }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
   }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* animação botao */
+
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none; 
   
-  .bottom-2 {
-    
-    -webkit-animation-name: bottom;
-            animation-name: bottom;
-  }
-  @-webkit-keyframes bottom-2 {
-    0% {
-      width: 0;
-    }
-    12% {
-      width: calc(103%);
-      background: #ffdb00;
-    }
-    25% {
-      background: #ffdb00;
-    }
-    38% {
-      background: #ffdb00;
-    }
-    50% {
-      width: calc(103%);
-      background: #ffdb00;
-    }
-    62% {
-      left: -3px;
-      width: 0;
-      background: #ffdb00;
-    }
-    75% {
-      background: #ffdb00;
-    }
-  }
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
   
-  .left-3 {
-    
-    -webkit-animation-name: left;
-            animation-name: left;
-  }
-  @-webkit-keyframes left-3 {
-    12% {
-      height: 0;
-      background: #ffdb00;
-    }
-    25% {
-      height: calc(103%);
-      background: #ffdb00;
-    }
-    38% {
-      background: #ffdb00;
-    }
-    50% {
-      background: #ffdb00;
-    }
-    62% {
-      height: calc(103%);
-      background: #ffdb00;
-    }
-    75% {
-      top: -3px;
-      height: 0;
-      background: #ffdb00;
-    }
-    88% {
-      background: #ffdb00;
-    }
-  }
   
-  .right-4 {
-    
-    -webkit-animation-name: right;
-            animation-name: right;
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+} */
+
+/* /* button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+} */
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+
+.left {
+  right: 70%;
+}
+
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 3s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
   }
-  @-webkit-keyframes right-4 {
-    38% {
-      height: 0;
-      background: #ffdb00;
-    }
-    50% {
-      height: calc(103%);
-      background: #ffdb00;
-    }
-    62% {
-      background: #ffdb00;
-    }
-    75% {
-      background: #ffdb00;
-    }
-    88% {
-      height: calc(103%);
-      background: #ffdb00;
-    }
-    100% {
-      top: auto;
-      bottom: -3px;
-      height: 0;
-      background: #ffdb00;
-    }
+  to {
+    transform: translate(0, -66.666%);
   }
-  
+}
